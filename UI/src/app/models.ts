@@ -18,3 +18,19 @@ export interface CartItem {
   product: Product;
   quantity: number;
 }
+
+export interface OrderItem {
+  productId: number;
+  productName: string;
+  unitPrice: number;
+  quantity: number;
+  lineTotal: number;
+}
+
+export interface Order {
+  id: number;
+  orderNumber: string;
+  subtotal: number;
+  createdAt: string;
+  items: OrderItem[];
+}
